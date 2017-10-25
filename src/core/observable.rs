@@ -1,6 +1,6 @@
 use super::subscriber::*;
 
-pub fn create<'a, T>(observer: fn(subscriber: Subscriber<T>) -> ()) -> Observable<T> {
+pub fn create<T>(observer: fn(subscriber: Subscriber<T>) -> ()) -> Observable<T> {
   Observable { observer }
 }
 
